@@ -20,5 +20,12 @@ Route::get('/', function () {
         'heading'=> 'My name is Nayem',
         'listings'=> Listing::all()
     ]);
+}); 
+
+//single listing
+Route::get('/listings/{id}', function($id){
+    return view('listing', [
+        'listing' => Listing::find($id)
+    ]);
 });
 
