@@ -1,8 +1,6 @@
 <?php
 
-use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +14,5 @@ use App\Models\Listing;
 */
 
 Route::get('/', function () {
-    return view('listings', [
-        'heading'=> 'My name is Nayem',
-        'listings'=> Listing::all()
-    ]);
+    return view('welcome');
 });
-
